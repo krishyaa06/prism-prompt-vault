@@ -1,0 +1,30 @@
+{
+  "name": "prism-prompt-vault",
+  "version": "1.0.0",
+  "description": "Local-first prompt library with {{variable}} templates, tags, search, pins and JSON import/export.",
+  "scripts": {
+    "test": "node --test",
+    "start": "npx --yes serve ."
+  },
+  "keywords": [
+    "prompt-engineering",
+    "prompts",
+    "llm",
+    "ai",
+    "chatgpt",
+    "claude",
+    "cursor",
+    "vibe-coding",
+    "prism-protocol"
+  ],
+  "author": "Soumya Bhandare (krishyaa06)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishyaa06/prism-prompt-vault.git"
+  },
+  "homepage": "https://krishyaa06.github.io/prism-prompt-vault/",
+  "engines": {
+    "node": ">=18.17"
+  }
+}

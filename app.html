@@ -1,0 +1,21 @@
+    <section class="vault">
+      <aside class="card side">
+        <input id="q" placeholder="Search prompts…" aria-label="Search" />
+        <div class="tags" id="tags"></div>
+        <div class="list" id="list"></div>
+        <div class="row"><button class="btn small primary" id="new">+ New</button><button class="btn small" id="exp">Export</button><label class="btn small" for="imp">Import</label><input type="file" id="imp" accept=".json" hidden /></div>
+      </aside>
+      <div class="stack">
+        <div class="card">
+          <div class="card-title"><input id="title" class="title-in" aria-label="Title" /><div class="row"><button class="btn small" id="pin">Pin</button><button class="btn small" id="del">Delete</button></div></div>
+          <input id="ptags" placeholder="tags, comma separated" aria-label="Tags" />
+          <textarea id="body" class="code" spellcheck="false" aria-label="Prompt template"></textarea>
+          <p class="muted hint">Use <code>{{variable}}</code> or <code>{{variable | default}}</code> placeholders.</p>
+        </div>
+        <div class="card">
+          <div class="card-title"><h2>Fill & copy</h2><div class="row"><span class="pill" id="len"></span><button class="btn small primary" id="copy">Copy prompt</button></div></div>
+          <div class="grid g2 vars" id="vars"></div>
+          <pre class="out filled" id="out"></pre>
+        </div>
+      </div>
+    </section>

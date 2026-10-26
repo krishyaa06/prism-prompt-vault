@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prism Prompt Vault · Prism Protocol</title>
+  <meta name="description" content="Local-first prompt library with {{variable}} templates, tags, search, pins and JSON import/export." />
+  <meta name="theme-color" content="#07080f" />
+  <meta property="og:title" content="Prism Prompt Vault · Prism Protocol" />
+  <meta property="og:description" content="Local-first prompt library with {{variable}} templates, tags, search, pins and JSON import/export." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/prism.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <style>:root{--accent:#B388FF;--accent-2:#FF6B9A}</style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="mark">◇</span><b>PRISM</b><span>Prompt Vault</span></a>
+    <nav>
+      <a class="btn small" href="https://github.com/krishyaa06/prism-prompt-vault" target="_blank" rel="noreferrer">★ GitHub</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">🗝️ Vibe Coding</p>
+      <h1>Your best prompts, <em>on tap.</em></h1>
+      <p class="lead">Save, tag and search reusable AI prompts with {{variables}}. Fill in the blanks and copy a finished prompt into Cursor, Claude or ChatGPT.</p>
+    </section>
+    <section class="vault">
+      <aside class="card side">
+        <input id="q" placeholder="Search prompts…" aria-label="Search" />
+        <div class="tags" id="tags"></div>
+        <div class="list" id="list"></div>
+        <div class="row"><button class="btn small primary" id="new">+ New</button><button class="btn small" id="exp">Export</button><label class="btn small" for="imp">Import</label><input type="file" id="imp" accept=".json" hidden /></div>
+      </aside>
+      <div class="stack">
+        <div class="card">
+          <div class="card-title"><input id="title" class="title-in" aria-label="Title" /><div class="row"><button class="btn small" id="pin">Pin</button><button class="btn small" id="del">Delete</button></div></div>
+          <input id="ptags" placeholder="tags, comma separated" aria-label="Tags" />
+          <textarea id="body" class="code" spellcheck="false" aria-label="Prompt template"></textarea>
+          <p class="muted hint">Use <code>{{variable}}</code> or <code>{{variable | default}}</code> placeholders.</p>
+        </div>
+        <div class="card">
+          <div class="card-title"><h2>Fill & copy</h2><div class="row"><span class="pill" id="len"></span><button class="btn small primary" id="copy">Copy prompt</button></div></div>
+          <div class="grid g2 vars" id="vars"></div>
+          <pre class="out filled" id="out"></pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="foot">
+    <span>◇ Prism Prompt Vault · Part of <a href="https://dc.gg/prismprotocol" target="_blank" rel="noreferrer">Prism Protocol</a></span>
+    <span><a href="https://github.com/krishyaa06/prism-prompt-vault" target="_blank" rel="noreferrer">Source</a> · MIT License · Runs 100% in your browser</span>
+  </footer>
+  <script src="js/prism.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
